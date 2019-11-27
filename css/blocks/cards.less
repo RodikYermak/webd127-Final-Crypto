@@ -1,0 +1,149 @@
+// main: ../main.less
+.cards {
+  width: 100%;
+  //   height: 500px;
+  height: auto;
+  //   background-color: green;
+  padding: 20px 35px;
+  margin: 0 auto;
+  display: flex;
+
+  //   align-items: center;
+  //   justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media @desktop {
+    max-width: 800px;
+  }
+}
+
+.card {
+  //   display: inline-block;
+  display: grid;
+  grid-template-areas:
+    "coin coin title title . ."
+    "coin coin time time . ."
+    ". price price price price ."
+    "button button button button . ."
+    ". . . . . .";
+  min-width: 110px;
+  height: 121px;
+  background-color: @white;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  border: 1px solid fade(@black, 10%);
+  transition: border 0.3s linear, box-shadow 0.3s linear;
+
+  &:hover {
+    box-shadow: 0px 3px 6px grey;
+    border: none;
+    .card-button {
+      visibility: visible;
+    }
+  }
+  @media @tablet {
+    max-width: 190px;
+    height: 209px;
+    border-radius: 10px;
+  }
+  @media @desktop {
+    max-width: 205px;
+  }
+}
+
+.card-img {
+  width: 25px;
+  grid-area: coin;
+  @media @tablet {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.card-title {
+  font-family: @main-condensed;
+  font-size: 1.3rem;
+  grid-area: title;
+  @media @tablet {
+    font-size: 3rem;
+    padding-left: 5px;
+  }
+  @media @desktop {
+    padding-left: 5px;
+  }
+}
+
+.card-time {
+  font-family: @main;
+  font-size: 0.7rem;
+  grid-area: time;
+  @media @tablet {
+    font-size: 1.2rem;
+  }
+}
+
+.card-price {
+  font-size: 2rem;
+  font-family: @main-condensed;
+  grid-area: price;
+  @media @tablet {
+    font-size: 3rem;
+  }
+}
+
+.card-button {
+  text-transform: uppercase;
+  font-family: @main;
+  font-size: 1.3rem;
+  border: 1px solid fade(@black, 10%);
+  width: 67px;
+  height: 22px;
+  border-radius: 5px;
+  padding-top: 3px;
+  //   padding-left: 21px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  grid-area: button;
+  &:hover {
+    background-color: @green;
+    border: none;
+    color: @white;
+  }
+  @media @tablet {
+    width: 139px;
+    height: 39px;
+    font-size: 1.7rem;
+    padding-top: 0.9rem;
+  }
+  @media @desktop {
+    visibility: hidden;
+  }
+}
+
+.btn-cards {
+  color: @black;
+  text-transform: uppercase;
+  font-family: @main;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: 1px solid @black;
+  width: 200px;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+
+  transition: background-color 0.3s linear;
+  &:hover {
+    background-color: @pink;
+    border: none;
+    color: @white;
+    box-shadow: 0px 3px 6px grey;
+  }
+}

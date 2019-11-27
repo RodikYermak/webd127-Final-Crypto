@@ -1,0 +1,59 @@
+// main: ../main.less
+
+.divider {
+  width: 100%;
+  min-height: 60px;
+  height: auto;
+  background-color: @dark-blue;
+  @media @tablet {
+    height: 99px;
+  }
+}
+
+.divider__2 {
+  width: 100%;
+  height: 278px;
+  background-color: @dark-blue;
+  color: @white;
+  font-family: @main;
+  text-align: center;
+  @media @tablet {
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+  }
+  @media @desktop {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.divider__2-title {
+  text-transform: uppercase;
+  font-family: @main-condensed;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+.divider__2-text {
+  font-size: 2rem;
+}
+// .divider-title {
+//   text-transform: uppercase;
+//   color: @white;
+//   font-family: @main;
+//   font-size: 3rem;
+// }
+
+.divider-text {
+  font-family: @main;
+  color: @white;
+  font-weight: normal;
+  font-size: 2rem;
+  padding-top: 1.8rem;
+  text-align: center;
+  @media @tablet {
+    padding-top: 3.1rem;
+    font-size: 3rem;
+    // height: 99px;
+  }
+}
