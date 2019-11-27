@@ -52,6 +52,9 @@
     display: flex;
     justify-content: space-between;
   }
+  @media @desktop {
+    justify-content: flex-end;
+  }
 }
 
 .navigation__links-link {
@@ -64,5 +67,10 @@
   }
   @media @desktop {
     font-size: 1.7rem;
+    margin-left: 2rem;
   }
+}
+
+.active {
+  color: @yellow;
 }
