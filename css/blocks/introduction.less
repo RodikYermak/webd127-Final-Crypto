@@ -1,0 +1,126 @@
+// main: ../main.less
+
+.introduction {
+  position: relative;
+  top: -1px;
+  width: 100%;
+  min-width: 320px;
+  min-height: 360px;
+  height: auto;
+  background-color: @dark-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 35% 10%;
+  @media @desktop {
+    padding-right: 2rem;
+    display: grid;
+    grid-template-areas:
+      "img img  . . . . . . ."
+      "img img  . title title title title . ."
+      "img img  . text text text text . ."
+      "img img  . button button . . . ."
+      "img img  . icon icon icon . . ."
+      "img img  . . . . . . .";
+    border-bottom-left-radius: 25% 15%;
+    border-bottom-right-radius: 25% 15%;
+    z-index: 2;
+    overflow: hidden;
+  }
+}
+
+.introduction-img {
+  max-width: 100%;
+  min-width: 190px;
+  height: auto;
+  margin-bottom: 0.7rem;
+  @media @tablet {
+    min-width: 250px;
+  }
+  @media @desktop {
+    min-width: 550px;
+    grid-area: img;
+  }
+}
+
+.introduction-title {
+  text-transform: uppercase;
+  color: @white;
+  font-family: @main;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  @media @tablet {
+    font-size: 3rem;
+  }
+  @media @desktop {
+    font-family: @main-condensed;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    grid-area: title;
+  }
+}
+
+.introduction-text {
+  font-size: 1.3rem;
+  font-family: @main;
+  color: @white;
+  max-width: 228px;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  @media @tablet {
+    font-size: 2rem;
+    max-width: 350px;
+  }
+  @media @desktop {
+    text-align: left;
+    font-size: 3rem;
+    max-width: 526px;
+    margin-bottom: 3rem;
+    grid-area: text;
+    font-family: @main-condensed;
+  }
+}
+
+.introduction-button {
+  color: @white;
+  text-transform: uppercase;
+  font-family: @main;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: 1px solid @white;
+  width: 200px;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+
+  transition: background-color 0.3s linear;
+  &:hover {
+    background-color: @pink;
+    border: none;
+  }
+
+  @media @desktop {
+    grid-area: button;
+    width: 230px;
+    height: 45px;
+    padding-top: 1.2rem;
+    font-family: @main-condensed;
+  }
+}
+
+.signin {
+  @media @tablet {
+    display: none;
+  }
+}
+
+.stores {
+  margin-bottom: 2rem;
+  @media @desktop {
+    grid-area: icon;
+  }
+}

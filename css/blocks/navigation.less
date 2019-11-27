@@ -1,0 +1,68 @@
+// main: ../main.less
+
+.navigation {
+  width: 100%;
+  min-width: 320px;
+  height: 64px;
+  background-color: @dark-blue;
+  color: @white;
+  padding: 2rem 3.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media @desktop {
+    height: 89px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.navigation-logo {
+  color: @white;
+  width: 50%;
+  font-family: @main;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+.navigation-burger {
+  cursor: pointer;
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.navigation-burger .line1,
+.navigation-burger .line2,
+.navigation-burger .line3 {
+  width: 12px;
+  height: 1px;
+  margin-bottom: 3px;
+  background-color: @white;
+}
+
+.navigation__links {
+  width: 50%;
+  display: none;
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.navigation__links-link {
+  font-size: 1.2rem;
+  font-family: @main-condensed;
+  text-transform: uppercase;
+  color: @white;
+  &:hover {
+    color: @yellow;
+  }
+  @media @desktop {
+    font-size: 1.7rem;
+  }
+}

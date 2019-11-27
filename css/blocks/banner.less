@@ -18,6 +18,27 @@
 .banner__coin {
   display: flex;
   align-items: center;
+  position: relative;
+  position: relative;
+  animation: mymove 90s;
+  animation-iteration-count: infinite;
+  @-webkit-keyframes mymove {
+    from {
+      right: 0px;
+    }
+    to {
+      right: 1000px;
+    }
+  }
+
+  @keyframes mymove {
+    from {
+      right: 0px;
+    }
+    to {
+      right: 1000px;
+    }
+  }
 }
 
 .banner__coin-img {
@@ -28,8 +49,7 @@
 
 .banner__coin-title {
   text-transform: uppercase;
-  //   font-family: @main;
-  font-family: "proxima-nova-condensed";
+  font-family: @main-condensed;
   font-weight: 700;
   font-size: 1rem;
   margin-right: 0.3rem;
@@ -39,7 +59,8 @@
 }
 
 .banner__coin-price {
-  font-family: @main;
+  font-family: @main-condensed;
+  font-weight: 400;
   font-size: 1rem;
   margin-right: 1rem;
   @media @desktop {
