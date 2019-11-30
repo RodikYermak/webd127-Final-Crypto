@@ -1,0 +1,123 @@
+// main: ../main.less
+
+.search-component {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: auto;
+}
+.search-component h2 {
+  font-family: @main;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: center;
+  @media @tablet {
+    font-size: 2rem;
+  }
+  @media @desktop {
+    font-size: 3rem;
+    margin: 3rem 0;
+  }
+}
+
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 20px;
+  border: 1px solid fade(@gray, 50%);
+  &[placeholder] {
+    font-family: @main;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  @media @tablet {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @media @desktop {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+#myTable {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 1.3rem;
+  font-family: @main-condensed;
+  @media @tablet {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 1.7rem;
+  }
+  @media @desktop {
+    width: 70%;
+    margin-left: 15%;
+    font-size: 2rem;
+  }
+}
+
+#myTable th,
+#myTable td {
+  text-align: left;
+  font-family: @main-condensed;
+  font-weight: normal;
+  padding: 0 3px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.buy-button {
+  padding: 0px 20px;
+  text-transform: uppercase;
+  font-family: @main-condensed;
+  font-size: 1.3rem;
+  border: 1px solid fade(@black, 10%);
+  width: 67px;
+  height: 22px;
+  border-radius: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  @media @tablet {
+    padding: 5px 30px;
+    font-size: 1.5rem;
+  }
+  @media @desktop {
+    padding: 5px 50px;
+    font-size: 1.7rem;
+  }
+}
+.buy-button:hover {
+  background-color: @green;
+  border: none;
+  color: @white;
+}
+
+.currency-icon {
+  padding-top: 3px;
+  width: 20px;
+  height: auto;
+  @media @tablet {
+    width: 30px;
+    height: auto;
+  }
+  @media @desktop {
+    width: 45px;
+    height: auto;
+  }
+}
