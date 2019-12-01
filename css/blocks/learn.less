@@ -1,0 +1,68 @@
+// main: ../main.less
+.learn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem;
+  font-family: @main;
+  @media @desktop {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+
+.learn__article {
+  cursor: pointer;
+  width: 50%;
+  margin-bottom: 1rem;
+  @media @tablet {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+}
+
+.learn__article-img {
+  max-width: 100%;
+  width: 128px;
+  height: 128px;
+  @media @tablet {
+    width: 200px;
+    height: 200px;
+  }
+  @media @desktop {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.learn__article-title,
+.learn__article-author {
+  font-family: @main-condensed;
+}
+
+.learn__article-title {
+  @media @tablet {
+    font-size: 1.7rem;
+  }
+  @media @desktop {
+    font-size: 2rem;
+  }
+}
+.learn__article-author {
+  @media @tablet {
+    font-size: 1.7rem;
+    font-weight: normal;
+  }
+  @media @desktop {
+    font-size: 2rem;
+  }
+}
+.learn__article-text {
+  @media @tablet {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  @media @desktop {
+    font-size: 1.7rem;
+  }
+}
