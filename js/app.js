@@ -1,18 +1,3 @@
-// const hamburger = document.querySelector(".hamburger");
-// const navLinks = document.querySelector(".nav-links");
-// const links = document.querySelectorAll(".nav-links li");
-
-// hamburger.addEventListener("click", () => {
-//   navLinks.classList.toggle("open");
-//   links.forEach(link => {
-//     link.classList.toggle("fade");
-//   });
-// });
-
-// function myFunctionCross(x) {
-//   x.classList.toggle("change");
-// }
-
 // markets table search for assets
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
