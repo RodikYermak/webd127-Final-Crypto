@@ -1,3 +1,4 @@
+// markets table search for assets
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
@@ -15,4 +16,24 @@ function myFunction() {
       }
     }
   }
+}
+
+// faq accordion
+var openCloseTab = document.getElementsByClassName("accordion-item__header");
+var openCloseIcon = document.getElementsByClassName("open-close-icon");
+
+for (var i = 0; i < openCloseTab.length; i++) {
+  openCloseTab[i].addEventListener("click", function() {
+    var textBlock = this.nextElementSibling;
+
+    if (textBlock.style.maxHeight) {
+      textBlock.style.maxHeight = null;
+      this.style.backgroundColor = "#404040";
+      this.firstElementChild.classList.remove("open");
+    } else {
+      this.style.backgroundColor = "#000000";
+      textBlock.style.maxHeight = textBlock.scrollHeight + "px";
+      this.firstElementChild.classList.add("open");
+    }
+  });
 }
